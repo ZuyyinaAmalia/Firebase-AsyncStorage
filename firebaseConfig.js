@@ -4,7 +4,6 @@ import { initializeApp } from 'firebase/app';
 import { getReactNativePersistence, initializeAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 
-// 1. Tempel config dari Firebase Console di sini
 const firebaseConfig = {
     apiKey: "AIzaSyD5S0NA3Aa2mdp1bF7gpCSaB5s676ORXw8",
     authDomain: "campusapp-e72a2.firebaseapp.com",
@@ -15,16 +14,16 @@ const firebaseConfig = {
     measurementId: "G-63T3MW2BG0"
 };
 
-// 2. Initialize Firebase
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-// 3. Initialize Auth dengan persistensi AsyncStorage
-// Ini kuncinya: Login akan tetap tersimpan meski aplikasi ditutup
+//Initialize Auth dengan persistensi AsyncStorage
 const auth = initializeAuth(app, {
     persistence: getReactNativePersistence(AsyncStorage)
 });
 
-// 4. Initialize Firestore
+// Initialize Firestore
 const db = getFirestore(app);
 
 export { auth, db };
+

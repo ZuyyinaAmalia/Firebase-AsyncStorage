@@ -293,7 +293,7 @@ function MahasiswaScreen({ user }) {
     );
 }
 
-// --- STYLES (Tetap Putih Biru UNDIP) ---
+// --- STYLES  ---
 const styles = StyleSheet.create({
     // Global
     container: {
